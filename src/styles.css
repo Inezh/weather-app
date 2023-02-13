@@ -5,9 +5,10 @@ body {
   width: 800px;
   height: 600px;
   border: 1px solid;
-  border-radius: 5px;
+  border-radius: 8px;
   border-color: rgb(83, 82, 82);
   color: rgb(26, 26, 28);
+  margin-top: 40px;
 }
 
 body {
