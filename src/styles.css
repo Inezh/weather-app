@@ -1,0 +1,84 @@
+body {
+  font-family: sans-serif;
+}
+.container {
+  width: 800px;
+  height: 600px;
+  border: 1px solid;
+  border-radius: 5px;
+  border-color: rgb(83, 82, 82);
+  color: rgb(26, 26, 28);
+}
+
+body {
+  width: 1520px;
+  align-content: center;
+}
+.box {
+  background-color: aquamarine;
+}
+.row {
+  color: gray;
+}
+
+h3 {
+  font-size: 30px;
+  margin-top: 0;
+  padding-top: 0;
+}
+p {
+  font-size: 70px;
+  margin: 0px;
+  padding: 0px;
+}
+.degree {
+  margin: 0px;
+  padding: 0px;
+}
+.Precipitation {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+.degree_smal {
+  font-size: 40px;
+}
+.coltwo {
+  color: gray;
+  margin-top: 200px;
+}
+.form-search {
+  box-sizing: 50px;
+  width: 350px;
+}
+
+.degreebottom {
+  font-size: 30px;
+}
+
+.fa-cloud {
+  margin: 10px;
+  color: rgb(147, 195, 241);
+  size: 70px;
+  align-content: center;
+}
+.fa-sun-o {
+  margin: 10px;
+  color: rgb(244, 238, 156);
+  size: 70px;
+  align-content: center;
+}
+h4 {
+  padding: 0px;
+  margin: 3px;
+  align-content: center;
+}
+.degreebottom {
+  align-content: center;
+}
+hr {
+  height: 10px;
+  width: 20px;
+  width: 50%;
+  text-align: left;
+  margin-left: 0;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Parcel Sandbox</title>
+	<meta charset="UTF-8" />
+	
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+	<link href="src/styles.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+
+  </head>
+
+<body>
+	<div class="container">
+    <div class="row p-2">
+     
+      <div class="col-6 mt-3 mb-1 my-2">
+        <form id="search-form">
+          <input type="text" id = "search" name="search" placeholder="Search..">
+          <input type="submit" value="Search"/>
+        </form>
+     
+        <br>
+
+        <h3 id="weekDay">
+          Wednesday 12.00
+          <br>
+          <!-- Clody ☁ -->
+
+        </h3>
+        <h3 id="cityName">
+          City
+        </h3>
+        <p id="mein-temp">
+          54 <sup class="degree">&#176 </sup>
+        </p>
+        
+          <span class="degree_smal">
+            <a href = "#" id="fahrenheit" style="text-decoration:none"> <b> F<sup>&#176 </sup> </b> </a>
+            <a href = "#" id="celsius" style="text-decoration:none"> <b>/ C<sup>&#176 </sup> </b> </a>
+            <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+
+          </span>
+      </div>
+
+        <div class="col coltwo mt-10">
+          <h3 class="Precipitation">Precipitation: 5% <br>
+            Humidity: 82%<br>
+            Wind: 13 km/h</h3> 
+        </div>
+        <br>
+        <hr>
+
+        <div class="row m-0 p-0">
+        <div class="col col-justify-content-center col-2">
+          
+          <h4>
+            TUE
+          </h4>
+          <i class="fa fa-3x fa-cloud"></i>
+          <p class="degreebottom">
+           <b>55</b><sup >&#176 </sup>/45<sup>&#176 </sup>
+          </p>
+        </div>
+
+        <div class="col col-justify-content-center col-2">
+          <h4>
+            FRI
+          </h4>
+          <i class="fa fa-3x fa-cloud"></i>
+          <p class="degreebottom">
+           <b>55</b><sup >&#176 </sup>/45<sup>&#176 </sup>
+          </p>
+        </div>
+
+        <div class="col col-justify-content-center col-2">
+          <h4>
+            SUT
+          </h4>
+          <i class="fa fa-3x fa-cloud"></i>
+          <p class="degreebottom">
+           <b>55</b><sup >&#176 </sup>/45<sup>&#176 </sup>
+          </p>
+        </div>
+
+        <div class="col col-justify-content-center col-2">
+          <h4>
+            SUN
+          </h4>
+          <i class="fa fa-3x fa-cloud"></i>
+          <p class="degreebottom">
+           <b>55</b><sup >&#176 </sup>/45<sup>&#176 </sup>
+          </p>
+        </div>
+
+        <div class="col col-justify-content-center col-2">
+          <h4>
+            MON
+          </h4>
+          <i class="fa fa-3x fa-cloud"></i>
+          <p class="degreebottom">
+           <b>55</b><sup >&#176 </sup>/45<sup>&#176 </sup>
+          </p>
+        </div>
+
+        <div class="col col-justify-content-center col-2">
+          <h4>
+            THUR
+          </h4>
+          <i class="fa fa-3x fa-sun-o" aria-hidden="true"></i>
+          <p class="degreebottom">
+           <b>55</b><sup >&#176 </sup>/45<sup>&#176 </sup>
+          </p>
+        </div>
+        </div>
+  </div>
+  </div>
+		
+		<script src='src/index.js'> </script>
+	<div id="app"></div>
+
+</body>
+</html>
