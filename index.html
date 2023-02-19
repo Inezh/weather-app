@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Parcel Sandbox</title>
+	<title>Weather App</title>
 	<meta charset="UTF-8" />
 	
   <meta charset="UTF-8">
@@ -22,14 +22,15 @@
   </head>
 
 <body>
+  <div class="app-container">
 	<div class="container">
 
-    <div class="row p-2">
+    <div class="row d-flex p-2">
      
       <div class="col-6 mt-3 mb-1 my-2">
         <form id="search-form">
-          <input type="text" id = "search" name="search" placeholder="Search..">
-          <input type="submit" value="Search"/>
+          <input type="text" class="search-holder" id = "search" name="search" placeholder="Search..">
+          <input type="submit" class="search-butt" value="Search"/>
         </form>
      
         <br>
@@ -43,30 +44,40 @@
         <h3 id="cityName">
           City
         </h3>
-        <p id="mein-temp">
-          54 <sup class="degree">&#176 </sup>
-        </p>
         
-          <span class="degree_smal">
-            <a href = "#" id="fahrenheit" style="text-decoration:none"> <b> F<sup>&#176 </sup> </b> </a>
-            <a href = "#" id="celsius" style="text-decoration:none"> <b>/ C<sup>&#176 </sup> </b> </a>
-
-          </span>
       </div>
 
-        <div class="col coltwo mt-10">
-          <h3 class="Precipitation">Precipitation: 5% <br>
-            Humidity: 82%<br>
-            Wind: 13 km/h</h3> 
+        <div class="col mt-12">
+<div class="characteristic">
+
+
+          <p id="mein-temp">
+            54<sup class="degree">&#176 </sup>
+               <span class="degree_smal">
+                 <a href = "#" id="fahrenheit" class="a"> <b> F<sup>&#176 </sup> </b> </a>
+                 <a href = "#" id="celsius" > <b>/ C<sup>&#176 </sup> </b> </a>
+              </span>
+          </p>
+
+          <h3 class="Precipitation">
+            <span id="feels-like">Feels like: 5°C </span> <br>
+            <span id="humidity">Humidity: 82%</span> <br>
+           <span id="windSp"> Wind: 13 km/h <br>
+           </h3> 
+          </span>
         </div>
+      </div>
+
         <br>
         <hr>
 
+        <div class="days">
         <div class="row m-0 p-0">
+
         <div class="col col-justify-content-center col-2">
-          
-          <h4>
-            TUE
+
+          <h4 style="text-align: center">
+            Tue
           </h4>
           <i class="fa fa-3x fa-cloud"></i>
           <p class="degreebottom">
@@ -76,7 +87,7 @@
 
         <div class="col col-justify-content-center col-2">
           <h4>
-            FRI
+            Fri
           </h4>
           <i class="fa fa-3x fa-cloud"></i>
           <p class="degreebottom">
@@ -86,7 +97,7 @@
 
         <div class="col col-justify-content-center col-2">
           <h4>
-            SUT
+            Sut
           </h4>
           <i class="fa fa-3x fa-cloud"></i>
           <p class="degreebottom">
@@ -96,7 +107,7 @@
 
         <div class="col col-justify-content-center col-2">
           <h4>
-            SUN
+            Sun
           </h4>
           <i class="fa fa-3x fa-cloud"></i>
           <p class="degreebottom">
@@ -106,7 +117,7 @@
 
         <div class="col col-justify-content-center col-2">
           <h4>
-            MON
+            Mon
           </h4>
           <i class="fa fa-3x fa-cloud"></i>
           <p class="degreebottom">
@@ -116,7 +127,7 @@
 
         <div class="col col-justify-content-center col-2">
           <h4>
-            THUR
+            Thur
           </h4>
           <i class="fa fa-3x fa-sun-o" aria-hidden="true"></i>
           <p class="degreebottom">
@@ -125,11 +136,12 @@
 
         </div>
         </div>
+        </div>
   </div>
-  <a href="https://ubiquitous-dasik-382854.netlify.app"> Netlify link </a>
-
   </div>
+  <a class="link-netlify" href="https://ubiquitous-dasik-382854.netlify.app"> Netlify link </a>
 
+</div>
 		<script src='src/index.js'> </script>
 	<div id="app"></div>
 

@@ -49,6 +49,19 @@ function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let temp = document.querySelector("#mein-temp");
   temp.innerHTML = `${temperature}°C`;
+
+  let humidity = Math.round(response.data.main.humidity);
+  let hum = document.querySelector("#humidity");
+  hum.innerHTML = `Humidity: ${humidity}%`;
+
+  let windSpeed = Math.round(response.data.wind.speed);
+  let wind = document.querySelector("#windSp");
+  wind.innerHTML = `Wind: ${windSpeed} km/h`;
+
+  let feelLike = Math.round(response.data.main.feels_like);
+  let feel = document.querySelector("#feels-like");
+  feel.innerHTML = `Feels like: ${feelLike}°C`;
+
 }
 
 function searching2(event) {
@@ -65,3 +78,6 @@ function searching2(event) {
 
 let form2 = document.querySelector("#search-form");
 form2.addEventListener("submit", searching2);
+
+
+

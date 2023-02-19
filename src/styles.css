@@ -1,14 +1,18 @@
 body {
   font-family: sans-serif;
 }
-.container {
+.app-container {
   width: 800px;
   height: 600px;
+align-content: center;
+margin-top: 40px;
+margin-left: 40px;
+}
+.container {  
   border: 1px solid;
   border-radius: 8px;
   border-color: rgb(83, 82, 82);
   color: rgb(26, 26, 28);
-  margin-top: 40px;
 }
 
 body {
@@ -21,9 +25,27 @@ body {
 .row {
   color: gray;
 }
+.search-holder {
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: rgb(221, 219, 219);
+  height: 40px;
+  text-align: 10px;
+  padding: 3px 7px;
+}
+
+.search-butt {
+  border-radius: 5px;
+border-color: none;
+border: 1px solid;
+border-color: rgb(221, 219, 219);
+height: 40px;
+width: 80px;
+font-size: small;
+}
 
 h3 {
-  font-size: 30px;
+  font-size: 25px;
   margin-top: 0;
   padding-top: 0;
 }
@@ -31,17 +53,24 @@ p {
   font-size: 70px;
   margin: 0px;
   padding: 0px;
+  color: rgb(64, 63, 63);
 }
 .degree {
   margin: 0px;
   padding: 0px;
 }
 .Precipitation {
-  font-size: 20px;
-  margin-bottom: 50px;
+  font-size: 17px;
+  margin-bottom: 30px;
 }
 .degree_smal {
-  font-size: 40px;
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+}
+a{
+  text-decoration: none;
+  color: #808080;
 }
 .coltwo {
   color: gray;
@@ -53,7 +82,7 @@ p {
 }
 
 .degreebottom {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .fa-cloud {
@@ -72,14 +101,28 @@ h4 {
   padding: 0px;
   margin: 3px;
   align-content: center;
+  text-align: center;
+  font-size: 20px;
 }
 .degreebottom {
   align-content: center;
 }
-hr {
-  height: 10px;
-  width: 20px;
-  width: 50%;
-  text-align: left;
-  margin-left: 0;
+.characteristic {
+  margin: 30px 20px;
 }
+hr{
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: auto;
+  height: 7px;
+  width: 100%;
+  text-align: center;
+  size: 400px;
+}
+.days{
+  margin-bottom: 20px;
+
+}
+.link-netlify{
+
+margin-top: 20px auto;}
