@@ -1,4 +1,3 @@
-// Axios link does not work in Codesandbox but works in VS code
 
 let now = new Date();
 
@@ -9,10 +8,6 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 
-// let date = now.getDate();
-// if (date < 10) {
-//   date = `0${date}`;
-// }
 let days = [
   "Sunday",
   "Monday",
@@ -25,11 +20,11 @@ let days = [
 let day = days[now.getDay()];
 weekDayMain.innerHTML = `${day} ${hours}:${minutes}`;
 
+
+
 function searching(event) {
   event.preventDefault();
-
   let inputValue = document.querySelector("#search");
-
   let h3 = document.querySelector("#cityName");
   h3.innerHTML = `Searching for ${inputValue.value}`;
 }
@@ -37,30 +32,33 @@ function searching(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searching);
 
-function changeFaren(event2) {
-  event2.preventDefault();
-
-  let temp = document.querySelector("#mein-temp");
-  temp.innerHTML = "55°";
-}
 
 function showTemperature(response) {
-  console.log(response.data.main.temp);
+  console.log(response.data);
   let temperature = Math.round(response.data.main.temp);
-  let temp = document.querySelector("#mein-temp");
+  let temp = document.querySelector("#mein-number");
   temp.innerHTML = `${temperature}°C`;
 
   let humidity = Math.round(response.data.main.humidity);
   let hum = document.querySelector("#humidity");
   hum.innerHTML = `Humidity: ${humidity}%`;
 
-  let windSpeed = Math.round(response.data.wind.speed);
+  let windSpeed = Math.round(response.data.wind.speed * 3.6);
   let wind = document.querySelector("#windSp");
   wind.innerHTML = `Wind: ${windSpeed} km/h`;
 
   let feelLike = Math.round(response.data.main.feels_like);
   let feel = document.querySelector("#feels-like");
   feel.innerHTML = `Feels like: ${feelLike}°C`;
+
+let iconElement = document.querySelector("#icon");
+iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
+  // let cityTime = (response.data.dt);
+  // let time = document.querySelector("#time");
+  // time.innerHTML = formatDate(response.data.dt * 1000)
+
+  // console.log(response.data.dt)
 
 }
 

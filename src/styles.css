@@ -4,9 +4,9 @@ body {
 .app-container {
   width: 800px;
   height: 600px;
-align-content: center;
-margin-top: 40px;
-margin-left: 40px;
+  align-content: center;
+  margin-top: 40px;
+  margin-left: 40px;
 }
 .container {  
   border: 1px solid;
@@ -49,29 +49,40 @@ h3 {
   margin-top: 0;
   padding-top: 0;
 }
-p {
-  font-size: 70px;
-  margin: 0px;
-  padding: 0px;
-  color: rgb(64, 63, 63);
-}
 .degree {
   margin: 0px;
   padding: 0px;
 }
 .Precipitation {
   font-size: 17px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  position: relative;
+  right: -15px;
 }
-.degree_smal {
-  font-size: 30px;
-  text-decoration: none;
-  color: black;
+
+.mein-number{
+  font-size: 65px;
+  margin: auto;
+  padding: auto;
+  position: relative;
+  right: 15px;
+  bottom: -10px;
 }
-a{
-  text-decoration: none;
-  color: #808080;
+.fa-sun-o {
+  /* font-size: 70px; */
+  margin: 10px;
+  color: rgb(246, 242, 131);
+  size: 70px;
+  align-content: center;
 }
+
+.degreeSmal{
+  position: relative; 
+  top: -20px;
+  right: 15px;
+  font-size: 20px;
+}
+
 .coltwo {
   color: gray;
   margin-top: 200px;
@@ -91,7 +102,8 @@ a{
   size: 70px;
   align-content: center;
 }
-.fa-sun-o {
+
+.fa-sun-cloud{
   margin: 10px;
   color: rgb(244, 238, 156);
   size: 70px;
@@ -108,7 +120,8 @@ h4 {
   align-content: center;
 }
 .characteristic {
-  margin: 30px 20px;
+  margin: 20px 20px;
+  align-content: center;
 }
 hr{
   margin-top: 30px;
@@ -124,5 +137,9 @@ hr{
 
 }
 .link-netlify{
-
-margin-top: 20px auto;}
+  margin: auto;
+  padding: auto;
+}
+a {
+  text-decoration: none;
+}
