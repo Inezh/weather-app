@@ -35,7 +35,10 @@ form.addEventListener("submit", searching);
 
 function showTemperature(response) {
   console.log(response.data);
-  let temperature = Math.round(response.data.main.temp);
+
+  celsiusTemperature = response.data.main.temp
+
+  let temperature = Math.round(celsiusTemperature);
   let temp = document.querySelector("#mein-number");
   temp.innerHTML = `${temperature}°C`;
 
@@ -78,4 +81,31 @@ let form2 = document.querySelector("#search-form");
 form2.addEventListener("submit", searching2);
 
 
+function showFahrenheitTemp(event){
+  event.preventDefault();
+  temperatureElement = document.querySelector("#mein-number");
+
+  celsius.classList.remove("celsius-link");
+  fahrenheit.classList.add("celsius-link");
+  let FahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(FahrenheitTemperature);
+}
+
+function showCelsiusTemp(event){
+  event.preventDefault();
+
+  celsius.classList.add("celsius-link");
+  fahrenheit.classList.remove("celsius-link");
+
+  let celsiusShowTemp = document.querySelector("#mein-number");
+  celsiusShowTemp.innerHTML = Math.round(celsiusTemperature);
+}
+
+let fahrenheit = document.querySelector("#fahrenheit-link");
+fahrenheit.addEventListener("click", showFahrenheitTemp);
+
+let celsiusTemperature = null;
+
+let celsius = document.querySelector("#celsius-link");
+celsius.addEventListener("click", showCelsiusTemp);
 

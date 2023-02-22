@@ -139,7 +139,22 @@ hr{
 .link-netlify{
   margin: auto;
   padding: auto;
-}
-a {
   text-decoration: none;
+  cursor: default;
+  color: gray;
+}
+
+.celsius-link{
+cursor: default;
+color: gray;
+text-decoration: none;
+}
+
+.characteristic .activC:hover {
+  text-decoration: none;
+
+}
+a{
+  text-decoration: none;
+  cursor: default;
 }
