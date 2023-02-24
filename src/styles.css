@@ -8,11 +8,21 @@ body {
   margin-top: 40px;
   margin-left: 40px;
 }
+
 .container {  
   border: 1px solid;
   border-radius: 8px;
   border-color: rgb(83, 82, 82);
   color: rgb(26, 26, 28);
+}
+.relative{
+  position: relative;
+
+}
+.absolute{
+  position: absolute; 
+  padding: 10px;
+  margin-left: -20px;
 }
 
 body {
@@ -32,10 +42,11 @@ body {
   height: 40px;
   text-align: 10px;
   padding: 3px 7px;
+  margin-bottom: 10px;
 }
 
 .search-butt {
-  border-radius: 5px;
+border-radius: 5px;
 border-color: none;
 border: 1px solid;
 border-color: rgb(221, 219, 219);
@@ -69,7 +80,6 @@ h3 {
   bottom: -10px;
 }
 .fa-sun-o {
-  /* font-size: 70px; */
   margin: 10px;
   color: rgb(246, 242, 131);
   size: 70px;
@@ -134,13 +144,9 @@ hr{
 }
 .days{
   margin-bottom: 20px;
-
 }
-.link-netlify{
-  margin: auto;
-  padding: auto;
-  text-decoration: none;
-  cursor: default;
+
+.absolute{
   color: gray;
 }
 
@@ -152,9 +158,12 @@ text-decoration: none;
 
 .characteristic .activC:hover {
   text-decoration: none;
-
 }
+
 a{
   text-decoration: none;
   cursor: default;
-}
+  }
+
+.description::first-letter{
+text-transform: capitalize;}

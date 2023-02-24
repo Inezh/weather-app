@@ -1,7 +1,5 @@
-
-let now = new Date();
-
-let weekDayMain = document.querySelector("#weekDay");
+function formatDate(timestamp) {
+let now = new Date(timestamp);
 let hours = now.getHours();
 let minutes = now.getMinutes();
 if (minutes < 10) {
@@ -18,8 +16,16 @@ let days = [
   "Saturday"
 ];
 let day = days[now.getDay()];
-weekDayMain.innerHTML = `${day} ${hours}:${minutes}`;
+return `${day} ${hours}:${minutes}`;
+}
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
 
 
 function searching(event) {
@@ -40,7 +46,7 @@ function showTemperature(response) {
 
   let temperature = Math.round(celsiusTemperature);
   let temp = document.querySelector("#mein-number");
-  temp.innerHTML = `${temperature}°C`;
+  temp.innerHTML = `${temperature}°`;
 
   let humidity = Math.round(response.data.main.humidity);
   let hum = document.querySelector("#humidity");
@@ -54,14 +60,17 @@ function showTemperature(response) {
   let feel = document.querySelector("#feels-like");
   feel.innerHTML = `Feels like: ${feelLike}°C`;
 
-let iconElement = document.querySelector("#icon");
-iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
-  // let cityTime = (response.data.dt);
-  // let time = document.querySelector("#time");
-  // time.innerHTML = formatDate(response.data.dt * 1000)
+  let weatherDescription = response.data.weather[0].description;
+  let description = document.querySelector("#description");
+  description.innerHTML = weatherDescription;
 
-  // console.log(response.data.dt)
+  let weekDayMain = document.querySelector("#weekDay");
+  weekDayMain.innerHTML = formatDate(response.data.dt * 1000);
+
+   console.log(response.data.dt)
 
 }
 
@@ -79,6 +88,7 @@ function searching2(event) {
 
 let form2 = document.querySelector("#search-form");
 form2.addEventListener("submit", searching2);
+
 
 
 function showFahrenheitTemp(event){

@@ -23,11 +23,11 @@
 
 <body>
   <div class="app-container">
-	<div class="container">
+	<div class="container" class="relative">
 
-    <div class="row d-flex p-2">
+    <div class="row p-2">
      
-      <div class="col-6 mt-3 mb-1 my-2">
+      <div class="col-6 mt-4">
         <form id="search-form">
           <input type="text" class="search-holder" id = "search" name="search" placeholder="Search..">
           <input type="submit" class="search-butt" value="Search"/>
@@ -37,18 +37,16 @@
 
         <h3 id="weekDay">
           Wednesday 
-          <br>
-          Clody ☁
-
+          <span id="time"></span>
         </h3>
-        <span id="time"></span>
+        <h3 class="description" id="description"></h3>
 
         <h3 id="cityName">
           City
         </h3>
         </div>
 
-        <div class="col mt-12">
+        <div class="col">
 <div class="characteristic">
 
           <p id="mein-temp">
@@ -56,7 +54,7 @@
             src = "http://openweathermap.org/img/wn/10d@2x.png"
             id="icon"/>
               <span id="mein-number" class="mein-number">15°</span>
-               <span class="degreeSmal">
+               <span class="degreeSmal" >
                  <a href = "#" id="fahrenheit-link"> <b> F<sup>&#176 </sup> </b> </a>
                  |
                  <a href = "#" id="celsius-link"> <b> C<sup>&#176 </sup> </b> </a>
@@ -76,7 +74,7 @@
         <hr>
 
         <div class="days">
-        <div class="row m-0 p-0">
+        <div class="row">
 
         <div class="col col-justify-content-center col-2">
 
@@ -142,10 +140,10 @@
         </div>
         </div>
   </div>
-  </div>
-  <a class="link-netlify" href="https://ubiquitous-dasik-382854.netlify.app"> Netlify link </a>
-
+  <a class="absolute" class="link-netlify" href="https://ubiquitous-dasik-382854.netlify.app"> Netlify link </a>
 </div>
+</div>
+
 		<script src='src/index.js'> </script>
 	<div id="app"></div>
 
