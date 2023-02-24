@@ -15,16 +15,6 @@ body {
   border-color: rgb(83, 82, 82);
   color: rgb(26, 26, 28);
 }
-.relative{
-  position: relative;
-
-}
-.absolute{
-  position: absolute; 
-  padding: 10px;
-  margin-left: -20px;
-}
-
 body {
   width: 1520px;
   align-content: center;
@@ -148,7 +138,9 @@ hr{
 
 .absolute{
   color: gray;
+
 }
+
 
 .celsius-link{
 cursor: default;
@@ -163,7 +155,10 @@ text-decoration: none;
 a{
   text-decoration: none;
   cursor: default;
-  }
+    }
+.link{
+  color: gray;
+}
 
 .description::first-letter{
 text-transform: capitalize;}
