@@ -38,6 +38,32 @@ function searching(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searching);
 
+function getForecast(coordinates){
+  console.log(coordinates);
+  let apiKey = `b35c686ba9565ba0ab254c2230937552`
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`
+axios.get(apiUrl).then(dayForecast);
+console.log(apiUrl);
+console.log(coordinates.daily);
+}
+
+function dayForecast(response){
+  console.log(response.data.daily);
+  let forecast = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun","Mon","Tue","Wen"];
+  days.forEach(function(day){
+  forecastHTML = forecastHTML + `
+    <div class="col-2">
+      <h4 style="text-align: center"> ${day}</h4>
+        <i class="fa fa-3x fa-cloud"></i>
+      <p class="degreebottom">
+      <b>55°</b>/11°</p>
+    </div>`
+  });
+      forecastHTML = forecastHTML + `</div>`
+      forecast.innerHTML = forecastHTML;
+}
 
 function showTemperature(response) {
   console.log(response.data);
@@ -71,6 +97,10 @@ function showTemperature(response) {
   weekDayMain.innerHTML = formatDate(response.data.dt * 1000);
 
    console.log(response.data.dt)
+
+   getForecast(response.data.coord);
+   console.log(response.data.coord);
+ 
 
 }
 
